@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".ui.PrefetchActivity">
         </activity>
+        <activity android:name=".ui.CustomBottombarActivity">
+        </activity>
         <activity android:name=".ui.BottombarActivity">
         </activity>
     </application>

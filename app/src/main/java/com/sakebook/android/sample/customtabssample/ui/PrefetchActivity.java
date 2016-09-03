@@ -20,25 +20,28 @@ import org.chromium.customtabsclient.shared.ServiceConnectionCallback;
 
 public class PrefetchActivity extends AppCompatActivity implements ServiceConnectionCallback {
 
-//    private final static String URL = "https://developer.android.com/index.html";
-    private final static String URL = "https://google.com";
+    private final static String URL_ARGS = "url";
 
     private CustomTabsClient customTabsClient;
     private ServiceConnection connection;
     private CustomTabsSession session;
+    private String url = "";
 
-    public static Intent createActivity(Context context) {
-        return new Intent(context, PrefetchActivity.class);
+    public static Intent createActivity(Context context, String url) {
+        Intent intent = new Intent(context, PrefetchActivity.class);
+        intent.putExtra(URL_ARGS, url);
+        return intent;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prefetch);
+        url = getIntent().getStringExtra(URL_ARGS);
         findViewById(R.id.launch_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CustomTabsUtil.launchCustomTabs(PrefetchActivity.this, URL, session);
+                CustomTabsUtil.launchCustomTabs(PrefetchActivity.this, url, session);
 //                CustomTabsUtil.launchCustomTabsWithBottombar(PrefetchActivity.this, URL, session);
             }
         });
@@ -84,7 +87,7 @@ public class PrefetchActivity extends AppCompatActivity implements ServiceConnec
         customTabsClient = client;
         customTabsClient.warmup(0L);
         session = customTabsClient.newSession(new CustomTabsEventCallback());
-        session.mayLaunchUrl(Uri.parse(URL), null, null);
+        session.mayLaunchUrl(Uri.parse(url), null, null);
     }
 
     @Override

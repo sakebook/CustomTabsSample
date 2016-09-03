@@ -13,15 +13,8 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/warm_up_button"
-        android:layout_below="@+id/launch_button"
-        android:text="Warm up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
         android:id="@+id/prefetch_button"
-        android:layout_below="@+id/warm_up_button"
+        android:layout_below="@+id/launch_button"
         android:text="Prefetch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -33,4 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/custom_bottombar_button"
+        android:layout_below="@+id/bottombar_button"
+        android:text="Custom bottom bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
