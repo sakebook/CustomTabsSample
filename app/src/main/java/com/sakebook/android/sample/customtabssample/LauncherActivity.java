@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.sakebook.android.sample.customtabssample.ui.BottombarActivity;
-import com.sakebook.android.sample.customtabssample.ui.CustomBottombarActivity;
+import com.sakebook.android.sample.customtabssample.ui.SessionBottombarActivity;
+import com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.PrefetchActivity;
 import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 
@@ -19,16 +20,19 @@ public class LauncherActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.launch_button:
-                    CustomTabsUtil.launchCustomTabs(LauncherActivity.this, URL, null);
+                    CustomTabsUtil.launchCustomTabs(LauncherActivity.this, URL);
                     break;
                 case R.id.prefetch_button:
                     startPrefetchActivity();
                     break;
+                case R.id.deprecated_bottombar_button:
+                    startDeprecatedBottombarActivity();
+                    break;
                 case R.id.bottombar_button:
                     startBottombarActivity();
                     break;
-                case R.id.custom_bottombar_button:
-                    startCustomBottombarActivity();
+                case R.id.session_bottombar_button:
+                    startSessionBottombarActivity();
                     break;
             }
         }
@@ -46,11 +50,17 @@ public class LauncherActivity extends AppCompatActivity {
         findViewById(R.id.launch_button).setOnClickListener(onClickListener);
         findViewById(R.id.prefetch_button).setOnClickListener(onClickListener);
         findViewById(R.id.bottombar_button).setOnClickListener(onClickListener);
-        findViewById(R.id.custom_bottombar_button).setOnClickListener(onClickListener);
+        findViewById(R.id.deprecated_bottombar_button).setOnClickListener(onClickListener);
+        findViewById(R.id.session_bottombar_button).setOnClickListener(onClickListener);
     }
 
     private void startPrefetchActivity() {
         Intent intent = PrefetchActivity.createActivity(this, URL);
+        startActivity(intent);
+    }
+
+    private void startDeprecatedBottombarActivity() {
+        Intent intent = DeprecatedBottombarActivity.createActivity(this, URL);
         startActivity(intent);
     }
 
@@ -59,8 +69,8 @@ public class LauncherActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void startCustomBottombarActivity() {
-        Intent intent = CustomBottombarActivity.createActivity(this);
+    private void startSessionBottombarActivity() {
+        Intent intent = SessionBottombarActivity.createActivity(this);
         startActivity(intent);
     }
 }

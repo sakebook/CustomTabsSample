@@ -17,9 +17,18 @@
         </activity>
         <activity android:name=".ui.PrefetchActivity">
         </activity>
-        <activity android:name=".ui.CustomBottombarActivity">
+        <activity android:name=".ui.SessionBottombarActivity">
         </activity>
         <activity android:name=".ui.BottombarActivity">
+        </activity>
+
+        <service
+            android:name="org.chromium.customtabsclient.shared.KeepAliveService"
+            android:exported="true"/>
+
+        <receiver android:name=".receivers.BottombarBroadcastReceiver"/>
+
+        <activity android:name=".ui.DeprecatedBottombarActivity">
         </activity>
     </application>
 

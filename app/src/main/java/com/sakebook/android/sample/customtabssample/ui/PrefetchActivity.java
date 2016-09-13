@@ -41,8 +41,8 @@ public class PrefetchActivity extends AppCompatActivity implements ServiceConnec
         findViewById(R.id.launch_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CustomTabsUtil.launchCustomTabs(PrefetchActivity.this, url, session);
-//                CustomTabsUtil.launchCustomTabsWithBottombar(PrefetchActivity.this, URL, session);
+                CustomTabsUtil.launchCustomTabs(PrefetchActivity.this, url);
+//                CustomTabsUtil.launchCustomTabsWithCustomBottombar(PrefetchActivity.this, URL, session);
             }
         });
     }

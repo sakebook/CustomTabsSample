@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CustomBottombarActivity">
+    tools:context="com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity">
 
     <Button
         android:id="@+id/launch_button"
-        android:text="Launch with Bottombar"
+        android:text="Launch with Deprecated Bottombar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
