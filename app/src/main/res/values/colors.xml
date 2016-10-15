@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="twitter">#1DA1F2</color>
+    <color name="mail">#F44336</color>
+    <color name="facebook">#3b5998</color>
+    <color name="line">#1EC221</color>
+
+
+
+
 </resources>

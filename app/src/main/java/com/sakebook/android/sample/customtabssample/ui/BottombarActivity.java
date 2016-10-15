@@ -29,8 +29,7 @@ public class BottombarActivity extends AppCompatActivity {
         findViewById(R.id.launch_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                CustomTabsUtil.launchCustomTabsWithBottombar(BottombarActivity.this, url);
-                CustomTabsUtil.launchCustomTabsWithCustomBottombar(BottombarActivity.this, url);
+                CustomTabsUtil.launchCustomTabsWithBottombar(BottombarActivity.this, url);
             }
         });
 
