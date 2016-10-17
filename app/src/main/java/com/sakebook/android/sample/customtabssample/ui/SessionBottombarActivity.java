@@ -59,7 +59,7 @@ public class SessionBottombarActivity extends AppCompatActivity {
         findViewById(R.id.launch_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CustomTabsUtil.launchCustomTabsWithUpdatedCustomBottombar(SessionBottombarActivity.this, URL, serviceHandler.getSession());
+                CustomTabsUtil.launchCustomTabsWithSessionBottombar(SessionBottombarActivity.this, URL, serviceHandler.getSession());
             }
         });
 

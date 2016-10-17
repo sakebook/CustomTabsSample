@@ -27,6 +27,7 @@
             android:exported="true"/>
 
         <receiver android:name=".receivers.BottombarBroadcastReceiver"/>
+        <receiver android:name=".receivers.SessionBottombarBroadcastReceiver"/>
 
         <activity android:name=".ui.DeprecatedBottombarActivity">
         </activity>

@@ -117,9 +117,10 @@ public class CustomTabsUtil {
 
     private static void addSessionBottombar(CustomTabsIntent.Builder builder, Activity activity, String url) {
         Intent broadcastIntent = new Intent(activity, SessionBottombarBroadcastReceiver.class);
+        broadcastIntent.setAction(SessionBottombarBroadcastReceiver.ACTION_ADD_FAVORITE);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(activity, 120, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         int[] ids = {R.id.image_favorite};
-        builder.setSecondaryToolbarViews(CustomBottombar.createSessionBottombar(), ids, pendingIntent);
+        builder.setSecondaryToolbarViews(CustomBottombar.createSessionBottombar(activity, false), ids, pendingIntent);
         builder.setShowTitle(true);
         builder.addDefaultShareMenuItem();
     }
