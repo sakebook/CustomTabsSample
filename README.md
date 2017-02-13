@@ -12,7 +12,7 @@ $ git submodule init
 $ git submodule update
 $ cd custom-tabs-client/
 $ git config core.sparsecheckout true
-$ echo shared/ > ../.git/modules/custom-tabs-client/info/sparse-checkout
+$ echo -e shared/\\ncustomtabs/ > ../.git/modules/custom-tabs-client/info/sparse-checkout
 $ git checkout master
 $ cd ..
 $ git read-tree -mu master

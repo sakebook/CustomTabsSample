@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/CustomTabsSample.iml" filepath="$PROJECT_DIR$/CustomTabsSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/custom-tabs-client/custom-tabs-client.iml" filepath="$PROJECT_DIR$/custom-tabs-client/custom-tabs-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-tabs-client/customtabs/customtabs.iml" filepath="$PROJECT_DIR$/custom-tabs-client/customtabs/customtabs.iml" />
       <module fileurl="file://$PROJECT_DIR$/custom-tabs-client/shared/shared.iml" filepath="$PROJECT_DIR$/custom-tabs-client/shared/shared.iml" />
     </modules>
   </component>

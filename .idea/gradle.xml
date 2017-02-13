@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/custom-tabs-client" />
+            <option value="$PROJECT_DIR$/custom-tabs-client/customtabs" />
             <option value="$PROJECT_DIR$/custom-tabs-client/shared" />
           </set>
         </option>

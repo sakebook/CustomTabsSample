@@ -1,1 +1,2 @@
-include ':app', ':custom-tabs-client:shared'
+include ':app', ':custom-tabs-client:shared', ':custom-tabs-client:customtabs'
+
