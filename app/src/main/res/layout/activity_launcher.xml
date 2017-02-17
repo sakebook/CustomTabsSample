@@ -13,8 +13,15 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/prefetch_button"
+        android:id="@+id/animation_button"
         android:layout_below="@+id/launch_button"
+        android:text="Custom Animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/prefetch_button"
+        android:layout_below="@+id/animation_button"
         android:text="Prefetch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

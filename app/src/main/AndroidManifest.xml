@@ -31,6 +31,8 @@
 
         <activity android:name=".ui.DeprecatedBottombarActivity">
         </activity>
+        <activity android:name=".ui.CustomAnimationActivity">
+        </activity>
     </application>
 
 </manifest>

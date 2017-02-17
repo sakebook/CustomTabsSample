@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.sakebook.android.sample.customtabssample.ui.BottombarActivity;
+import com.sakebook.android.sample.customtabssample.ui.CustomAnimationActivity;
 import com.sakebook.android.sample.customtabssample.ui.SessionBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.PrefetchActivity;
@@ -24,6 +25,9 @@ public class LauncherActivity extends AppCompatActivity {
                     break;
                 case R.id.prefetch_button:
                     startPrefetchActivity();
+                    break;
+                case R.id.animation_button:
+                    startCustomAnimationActivity();
                     break;
                 case R.id.deprecated_bottombar_button:
                     startDeprecatedBottombarActivity();
@@ -48,6 +52,7 @@ public class LauncherActivity extends AppCompatActivity {
 
     private void initLayout() {
         findViewById(R.id.launch_button).setOnClickListener(onClickListener);
+        findViewById(R.id.animation_button).setOnClickListener(onClickListener);
         findViewById(R.id.prefetch_button).setOnClickListener(onClickListener);
         findViewById(R.id.bottombar_button).setOnClickListener(onClickListener);
         findViewById(R.id.deprecated_bottombar_button).setOnClickListener(onClickListener);
@@ -56,6 +61,11 @@ public class LauncherActivity extends AppCompatActivity {
 
     private void startPrefetchActivity() {
         Intent intent = PrefetchActivity.createActivity(this, URL);
+        startActivity(intent);
+    }
+
+    private void startCustomAnimationActivity() {
+        Intent intent = CustomAnimationActivity.createActivity(this, URL);
         startActivity(intent);
     }
 
