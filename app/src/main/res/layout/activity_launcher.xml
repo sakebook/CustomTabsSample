@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LauncherActivity">
 
-    <Button
-        android:id="@+id/launch_button"
-        android:text="Launch"
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/layout_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/animation_button"
-        android:layout_below="@+id/launch_button"
-        android:text="Custom Animation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/launch_button"
+            android:text="@string/button_label_launch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/prefetch_button"
-        android:layout_below="@+id/animation_button"
-        android:text="Prefetch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/animation_button"
+            android:text="@string/button_label_customize_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/deprecated_bottombar_button"
-        android:layout_below="@+id/prefetch_button"
-        android:text="Deprecated Bottom bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/prefetch_button"
+            android:text="@string/button_label_prefetch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/bottombar_button"
-        android:layout_below="@+id/deprecated_bottombar_button"
-        android:text="Bottom bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/deprecated_bottombar_button"
+            android:text="@string/button_label_deprecated_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/session_bottombar_button"
-        android:layout_below="@+id/bottombar_button"
-        android:text="Session bottom bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+        <Button
+            android:id="@+id/bottombar_button"
+            android:text="@string/button_label_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/session_bottombar_button"
+            android:text="@string/button_label_session_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

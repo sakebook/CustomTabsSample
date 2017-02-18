@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.sakebook.android.sample.customtabssample.ui.BottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.CustomAnimationActivity;
@@ -51,12 +52,11 @@ public class LauncherActivity extends AppCompatActivity {
     }
 
     private void initLayout() {
-        findViewById(R.id.launch_button).setOnClickListener(onClickListener);
-        findViewById(R.id.animation_button).setOnClickListener(onClickListener);
-        findViewById(R.id.prefetch_button).setOnClickListener(onClickListener);
-        findViewById(R.id.bottombar_button).setOnClickListener(onClickListener);
-        findViewById(R.id.deprecated_bottombar_button).setOnClickListener(onClickListener);
-        findViewById(R.id.session_bottombar_button).setOnClickListener(onClickListener);
+        ViewGroup viewGroup = (ViewGroup) findViewById(R.id.layout_parent);
+        int viewCount = viewGroup.getChildCount();
+        for (int i = 0; i < viewCount; i++) {
+            viewGroup.getChildAt(i).setOnClickListener(onClickListener);
+        }
     }
 
     private void startPrefetchActivity() {

@@ -2,4 +2,12 @@
     <string name="app_name">CustomTabsSample</string>
     <string name="favorite_before_text">気に入ったらハート押してお気に入りに追加しよう！</string>
     <string name="favorite_after_text">お気に入りに追加されています</string>
+
+    <string name="button_label_launch">Launch</string>
+    <string name="button_label_customize_toolbar">Customize toolbar</string>
+    <string name="button_label_customize_animation">Customize animation</string>
+    <string name="button_label_prefetch">Prefetch</string>
+    <string name="button_label_deprecated_bottom_bar">Deprecated bottom bar</string>
+    <string name="button_label_bottom_bar">Bottom bar</string>
+    <string name="button_label_session_bottom_bar">Session bottom bar</string>
 </resources>
