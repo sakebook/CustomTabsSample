@@ -62,27 +62,27 @@ public class LauncherActivity extends AppCompatActivity {
     }
 
     private void startPrefetchActivity() {
-        Intent intent = PrefetchActivity.createActivity(this, URL);
+        Intent intent = PrefetchActivity.createIntent(this, URL);
         startActivity(intent);
     }
 
     private void startCustomAnimationActivity() {
-        Intent intent = CustomAnimationActivity.createActivity(this, URL);
+        Intent intent = CustomAnimationActivity.createIntent(this, URL);
         startActivity(intent);
     }
 
     private void startDeprecatedBottombarActivity() {
-        Intent intent = DeprecatedBottombarActivity.createActivity(this, URL);
+        Intent intent = DeprecatedBottombarActivity.createIntent(this, URL);
         startActivity(intent);
     }
 
     private void startBottombarActivity() {
-        Intent intent = BottombarActivity.createActivity(this, URL);
+        Intent intent = BottombarActivity.createIntent(this, URL);
         startActivity(intent);
     }
 
     private void startSessionBottombarActivity() {
-        Intent intent = SessionBottombarActivity.createActivity(this);
+        Intent intent = SessionBottombarActivity.createIntent(this);
         startActivity(intent);
     }
 }

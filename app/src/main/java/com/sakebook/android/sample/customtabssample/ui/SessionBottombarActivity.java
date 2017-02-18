@@ -46,7 +46,7 @@ public class SessionBottombarActivity extends AppCompatActivity {
         }
     };
 
-    public static Intent createActivity(Context context) {
+    public static Intent createIntent(Context context) {
         return new Intent(context, SessionBottombarActivity.class);
     }
 

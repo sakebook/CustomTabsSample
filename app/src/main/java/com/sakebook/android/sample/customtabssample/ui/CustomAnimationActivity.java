@@ -15,7 +15,7 @@ public class CustomAnimationActivity extends AppCompatActivity {
     private final static String URL_ARGS = "url";
     private String url = "";
 
-    public static Intent createActivity(Context context, String url) {
+    public static Intent createIntent(Context context, String url) {
         Intent intent = new Intent(context, CustomAnimationActivity.class);
         intent.putExtra(URL_ARGS, url);
         return intent;

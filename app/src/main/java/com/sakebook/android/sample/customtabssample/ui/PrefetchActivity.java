@@ -27,7 +27,7 @@ public class PrefetchActivity extends AppCompatActivity implements ServiceConnec
     private CustomTabsSession session;
     private String url = "";
 
-    public static Intent createActivity(Context context, String url) {
+    public static Intent createIntent(Context context, String url) {
         Intent intent = new Intent(context, PrefetchActivity.class);
         intent.putExtra(URL_ARGS, url);
         return intent;
