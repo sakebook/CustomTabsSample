@@ -19,6 +19,12 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/custom_toolbar_button"
+            android:text="@string/button_label_customize_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
             android:id="@+id/animation_button"
             android:text="@string/button_label_customize_animation"
             android:layout_width="match_parent"
@@ -31,7 +37,25 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/deprecated_bottombar_button"
+            android:id="@+id/header_button"
+            android:text="@string/button_label_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/referrer_button"
+            android:text="@string/button_label_referrer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/oauth_button"
+            android:text="@string/button_label_oauth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/deprecated_bottom_bar_button"
             android:text="@string/button_label_deprecated_bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -43,7 +67,7 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/session_bottombar_button"
+            android:id="@+id/session_bottom_bar_button"
             android:text="@string/button_label_session_bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

@@ -7,6 +7,9 @@
     <string name="button_label_customize_toolbar">Customize toolbar</string>
     <string name="button_label_customize_animation">Customize animation</string>
     <string name="button_label_prefetch">Prefetch</string>
+    <string name="button_label_header">Header</string>
+    <string name="button_label_referrer">Referrer</string>
+    <string name="button_label_oauth">Oauth</string>
     <string name="button_label_deprecated_bottom_bar">Deprecated bottom bar</string>
     <string name="button_label_bottom_bar">Bottom bar</string>
     <string name="button_label_session_bottom_bar">Session bottom bar</string>

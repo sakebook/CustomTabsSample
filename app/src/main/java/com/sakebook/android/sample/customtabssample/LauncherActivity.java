@@ -16,6 +16,8 @@ import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 public class LauncherActivity extends AppCompatActivity {
 
     private final static String URL = "https://developer.android.com/index.html";
+//    private final static String URL = "http://cgi.b4iine.net/env/";
+
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -30,13 +32,13 @@ public class LauncherActivity extends AppCompatActivity {
                 case R.id.animation_button:
                     startCustomAnimationActivity();
                     break;
-                case R.id.deprecated_bottombar_button:
+                case R.id.deprecated_bottom_bar_button:
                     startDeprecatedBottombarActivity();
                     break;
                 case R.id.bottombar_button:
                     startBottombarActivity();
                     break;
-                case R.id.session_bottombar_button:
+                case R.id.session_bottom_bar_button:
                     startSessionBottombarActivity();
                     break;
             }

@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".ui.CustomAnimationActivity">
         </activity>
+        <activity android:name=".ui.CustomToolbarActivity">
+        </activity>
     </application>
 
 </manifest>
