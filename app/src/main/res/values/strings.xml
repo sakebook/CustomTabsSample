@@ -13,4 +13,13 @@
     <string name="button_label_deprecated_bottom_bar">Deprecated bottom bar</string>
     <string name="button_label_bottom_bar">Bottom bar</string>
     <string name="button_label_session_bottom_bar">Session bottom bar</string>
+
+    <!-- Customize toolbar -->
+    <string name="customize_toolbar_launch_button_dark_toolbar">Launch with Dark toolbar</string>
+    <string name="customize_toolbar_launch_button_light_toolbar">Launch with Light toolbar</string>
+    <string name="customize_toolbar_launch_button_no_tint">Launch with disable tint</string>
+    <string name="customize_toolbar_launch_button_add_menu_item">Launch with menu item</string>
+    <string name="customize_toolbar_curl_copy">Copy url: "%1$s"</string>
+    <string name="customize_toolbar_curl_copy_error">Could not copy url.</string>
+
 </resources>

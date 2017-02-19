@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LauncherActivity">
+        <activity
+            android:name=".LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -35,6 +36,17 @@
         </activity>
         <activity android:name=".ui.CustomToolbarActivity">
         </activity>
+
+        <service
+            android:name=".services.ClipboardService"
+            android:exported="false">
+        </service>
+
+        <receiver
+            android:name=".receivers.ShareBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+        </receiver>
     </application>
 
 </manifest>

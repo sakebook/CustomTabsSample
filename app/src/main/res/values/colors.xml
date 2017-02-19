@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="brown_500">#795548</color>
+    <color name="yellow_500">#FFEB3B</color>
     <color name="transparent">#00000000</color>
 
     <color name="twitter">#1DA1F2</color>
