@@ -31,20 +31,20 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/prefetch_button"
-            android:text="@string/button_label_prefetch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/header_button"
-            android:text="@string/button_label_header"
+            android:id="@+id/custom_request_button"
+            android:text="@string/button_label_customize_request"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/referrer_button"
             android:text="@string/button_label_referrer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/prefetch_button"
+            android:text="@string/button_label_prefetch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
