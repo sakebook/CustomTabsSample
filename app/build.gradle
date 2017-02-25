@@ -10,6 +10,17 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+
+        if (rootProject.file('private.properties').exists()) {
+            def props = new Properties()
+            props.load(new FileInputStream(file('../private.properties')))
+            buildConfigField("String", "CLIENT_ID", "${props.client_id}")
+            buildConfigField("String", "CLIENT_SECRET", "${props.client_secret}")
+        } else {
+            buildConfigField("String", "CLIENT_ID", "YOUR_CLIENT_ID")
+            buildConfigField("String", "CLIENT_SECRET", "YOUR_CLIENT_SECRET")
+        }
+
     }
     buildTypes {
         release {

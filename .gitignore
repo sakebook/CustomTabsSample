@@ -6,3 +6,6 @@
 .DS_Store
 /build
 /captures
+private.properties
+keystore.properties
+
