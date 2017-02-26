@@ -44,57 +44,6 @@ public class CustomTabsUtil {
         customTabsIntent.launchUrl(activity, Uri.parse(url));
     }
 
-    public static void launchCustomTabsWithDeprecatedBottombar(Activity activity, String url) {
-        String packageName = CustomTabsHelper.getPackageNameToUse(activity);
-        if (TextUtils.isEmpty(packageName)) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-        }
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        addDeprecatedToolbar(builder, activity, url);
-
-        CustomTabsIntent customTabsIntent = builder.build();
-        customTabsIntent.intent.setPackage(packageName);
-        customTabsIntent.launchUrl(activity, Uri.parse(url));
-    }
-
-    private static void addDeprecatedToolbar(CustomTabsIntent.Builder builder, Activity activity, String url) {
-        Intent browseIntent = new Intent();
-        browseIntent.setAction(Intent.ACTION_VIEW);
-        browseIntent.setData(Uri.parse(url));
-        PendingIntent pendingBrowseIntent = PendingIntent.getActivity(activity, 100, browseIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        Bitmap icon = BitmapFactory.decodeResource(activity.getResources(), R.drawable.ic_open_in_browser_black);
-        builder.addToolbarItem(1, icon, "view", pendingBrowseIntent);
-
-        Intent shareIntent = new Intent();
-        shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, url);
-        PendingIntent pendingShareIntent = PendingIntent.getActivity(activity, 101, shareIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        Bitmap icons = BitmapFactory.decodeResource(activity.getResources(), R.drawable.ic_share_black);
-        builder.addToolbarItem(2, icons, "share", pendingShareIntent);
-    }
-
-
-    public static void launchCustomTabsWithBottombar(Activity activity, String url) {
-        String packageName = CustomTabsHelper.getPackageNameToUse(activity);
-        if (TextUtils.isEmpty(packageName)) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-        }
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        addBottombar(builder, activity, url);
-        CustomTabsIntent customTabsIntent = builder.build();
-        CustomTabsHelper.addKeepAliveExtra(activity, customTabsIntent.intent);
-        customTabsIntent.intent.setPackage(packageName);
-        customTabsIntent.launchUrl(activity, Uri.parse(url));
-    }
-
-    private static void addBottombar(CustomTabsIntent.Builder builder, Activity activity, String url) {
-        Intent broadcastIntent = new Intent(activity, BottombarBroadcastReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(activity, 110, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        int[] ids = {R.id.twitter, R.id.line, R.id.facebook};
-//        builder.setSecondaryToolbarViews(CustomBottombar.createBottombar(), ids, pendingIntent);
-        builder.setShowTitle(true);
-    }
 
     public static void launchCustomTabsWithSessionBottombar(Activity activity, String url, @Nullable CustomTabsSession session) {
         String packageName = CustomTabsHelper.getPackageNameToUse(activity);

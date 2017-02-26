@@ -43,6 +43,12 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/deprecated_bottom_bar_button"
+            android:text="@string/button_label_deprecated_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
             android:id="@+id/remote_view_button"
             android:text="@string/button_label_remote_view"
             android:layout_width="match_parent"
@@ -51,12 +57,6 @@
         <Button
             android:id="@+id/prefetch_button"
             android:text="@string/button_label_prefetch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/deprecated_bottom_bar_button"
-            android:text="@string/button_label_deprecated_bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
