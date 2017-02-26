@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:background="@color/colorPrimary"
-              android:layout_gravity="center"
               android:layout_width="match_parent"
-              android:layout_height="56dp">
+              android:layout_height="?android:attr/actionBarSize">
 
     <LinearLayout
         android:id="@+id/twitter"
@@ -16,12 +15,11 @@
         android:layout_height="match_parent">
         <ImageView
             android:src="@drawable/twitter"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="Twitter"
-            android:layout_gravity="center"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -42,6 +40,7 @@
         <TextView
             android:text="LINE"
             android:layout_gravity="center"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -56,12 +55,11 @@
         android:layout_height="match_parent">
         <ImageView
             android:src="@drawable/facebook"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="Facebook"
-            android:layout_gravity="center"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>

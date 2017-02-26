@@ -28,11 +28,4 @@ public final class CustomBottombar {
         }
         return remoteViews;
     }
-
-    public static RemoteViews createBottombar() {
-        RemoteViews remoteViews = new RemoteViews(BuildConfig.APPLICATION_ID, R.layout.remote_bottom_layout);
-        return remoteViews;
-    }
-
-
 }

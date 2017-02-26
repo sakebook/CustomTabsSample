@@ -92,7 +92,7 @@ public class CustomTabsUtil {
         Intent broadcastIntent = new Intent(activity, BottombarBroadcastReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(activity, 110, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         int[] ids = {R.id.twitter, R.id.line, R.id.facebook};
-        builder.setSecondaryToolbarViews(CustomBottombar.createBottombar(), ids, pendingIntent);
+//        builder.setSecondaryToolbarViews(CustomBottombar.createBottombar(), ids, pendingIntent);
         builder.setShowTitle(true);
     }
 

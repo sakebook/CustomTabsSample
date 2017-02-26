@@ -10,6 +10,7 @@
     <string name="button_label_customize_request">Customize request</string>
     <string name="button_label_referrer">Referrer</string>
     <string name="button_label_oauth">OAuth Authorization</string>
+    <string name="button_label_remote_view">Remote View</string>
     <string name="button_label_deprecated_bottom_bar">Deprecated bottom bar</string>
     <string name="button_label_bottom_bar">Bottom bar</string>
     <string name="button_label_session_bottom_bar">Session bottom bar</string>
@@ -27,5 +28,9 @@
     <string name="oauth_request_url">https://github.com/login/oauth/authorize?client_id=%1$s</string>
     <string name="callback_scheme">callback</string>
     <string name="callback_host">com.sakebook.android.sample.customtabssample</string>
+
+
+    <!-- RemoteView -->
+    <string name="remote_view_twitter">callback</string>
 
 </resources>

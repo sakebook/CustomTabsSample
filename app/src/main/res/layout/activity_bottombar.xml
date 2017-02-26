@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/launch_button"
-        android:text="Launch with old bottombar"
+        android:id="@+id/button_remote_view"
+        android:text="Launch with RemoteView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
-</RelativeLayout>
+</LinearLayout>

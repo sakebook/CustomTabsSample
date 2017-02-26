@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".ui.SessionBottombarActivity">
         </activity>
-        <activity android:name=".ui.BottombarActivity">
+        <activity android:name=".ui.RemoteViewActivity">
         </activity>
 
         <service
