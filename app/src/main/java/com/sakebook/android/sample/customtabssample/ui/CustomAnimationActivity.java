@@ -2,7 +2,6 @@ package com.sakebook.android.sample.customtabssample.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
@@ -11,9 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.sakebook.android.sample.customtabssample.LauncherActivity;
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 
@@ -34,15 +31,21 @@ public class CustomAnimationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_animation);
         url = getIntent().getStringExtra(URL_ARGS);
 
-        findViewById(R.id.launch_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_animation_slide_in).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                launchCustomTabs(url);
+                launchCustomTabsWithSlide(url);
+            }
+        });
+        findViewById(R.id.button_animation_modal).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchCustomTabsWithModal(url);
             }
         });
     }
 
-    private void launchCustomTabs(String url) {
+    private void launchCustomTabsWithSlide(String url) {
         String packageName = CustomTabsHelper.getPackageNameToUse(this);
         if (TextUtils.isEmpty(packageName)) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
@@ -52,8 +55,8 @@ public class CustomAnimationActivity extends AppCompatActivity {
         CustomTabsIntent.Builder builder =
                 new CustomTabsIntent.Builder()
                         .setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary))
-                        .setStartAnimations(this, R.anim.customtabs_in_anim, R.anim.application_out_anim)
-                        .setExitAnimations(this, R.anim.application_in_anim, R.anim.customtabs_out_anim)
+                        .setStartAnimations(this, R.anim.customtabs_in_slide_anim, R.anim.application_out_slide_anim)
+                        .setExitAnimations(this, R.anim.application_in_slide_anim, R.anim.customtabs_out_slide_anim)
                 ;
 
         CustomTabsIntent customTabsIntent = builder.build();
@@ -61,4 +64,22 @@ public class CustomAnimationActivity extends AppCompatActivity {
         customTabsIntent.launchUrl(this, Uri.parse(url));
     }
 
+    private void launchCustomTabsWithModal(String url) {
+        String packageName = CustomTabsHelper.getPackageNameToUse(this);
+        if (TextUtils.isEmpty(packageName)) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            return;
+        }
+
+        CustomTabsIntent.Builder builder =
+                new CustomTabsIntent.Builder()
+                        .setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary))
+                        .setStartAnimations(this, R.anim.customtabs_in_modal_anim, R.anim.application_out_modal_anim)
+                        .setExitAnimations(this, R.anim.application_in_modal_anim, R.anim.customtabs_out_modal_anim)
+                ;
+
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.intent.setPackage(packageName);
+        customTabsIntent.launchUrl(this, Uri.parse(url));
+    }
 }
