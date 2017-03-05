@@ -78,7 +78,7 @@ public class CustomToolbarActivity extends AppCompatActivity {
         CustomTabsIntent.Builder builder =
                 new CustomTabsIntent.Builder()
                         .setToolbarColor(ContextCompat.getColor(this, colorRes))
-                        .setActionButton(ResourceUtil.getBitmap(this, R.drawable.ic_android_pink_500), "sample", createActivityPendingIntent(12), true)
+                        .setActionButton(ResourceUtil.createBitmap(this, R.drawable.ic_android_pink_500), "sample", createActivityPendingIntent(12), true)
                         .setShowTitle(true)
                 ;
 
@@ -98,7 +98,7 @@ public class CustomToolbarActivity extends AppCompatActivity {
         CustomTabsIntent.Builder builder =
                 new CustomTabsIntent.Builder()
                         .setActionButton(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher), "sample1", createActivityPendingIntent(11)) // Not displayed.
-                        .setActionButton(ResourceUtil.getBitmap(this, R.drawable.ic_android_pink_500), "sample2", createActivityPendingIntent(12))
+                        .setActionButton(ResourceUtil.createBitmap(this, R.drawable.ic_android_pink_500), "sample2", createActivityPendingIntent(12))
                 ;
 
         CustomTabsIntent customTabsIntent = builder.build();
@@ -122,7 +122,7 @@ public class CustomToolbarActivity extends AppCompatActivity {
                         .addMenuItem("home1", createActivityPendingIntent(25))
                         .addMenuItem("home2", createActivityPendingIntent(26)) // Not displayed.
                         .addDefaultShareMenuItem()
-                        .setCloseButtonIcon(ResourceUtil.getBitmap(this, R.drawable.ic_android_pink_500))
+                        .setCloseButtonIcon(ResourceUtil.createBitmap(this, R.drawable.ic_android_pink_500))
                 ;
 
         CustomTabsIntent customTabsIntent = builder.build();
