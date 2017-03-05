@@ -45,7 +45,7 @@ public class CustomRequestActivity extends AppCompatActivity {
         findViewById(R.id.button_request_referrer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                launchCustomTabsWithReferrer(url);
+                launchCustomTabsWithReferrer(CustomRequestActivity.this, url);
             }
         });
         findViewById(R.id.button_request_normal).setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,7 @@ public class CustomRequestActivity extends AppCompatActivity {
         customTabsIntent.launchUrl(this, Uri.parse(url));
     }
 
-    private void launchCustomTabsWithReferrer(String url) {
+    private void launchCustomTabsWithReferrer(Context context, String url) {
         String packageName = CustomTabsHelper.getPackageNameToUse(this);
         if (TextUtils.isEmpty(packageName)) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
@@ -79,9 +79,10 @@ public class CustomRequestActivity extends AppCompatActivity {
         }
         CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder().build();
         customTabsIntent.intent.setPackage(packageName);
+
         customTabsIntent.intent.putExtra(Intent.EXTRA_REFERRER,
-                Uri.parse("android-app:" + "//" + BuildConfig.APPLICATION_ID));
-        customTabsIntent.launchUrl(this, Uri.parse(url));
+                Uri.parse("android-app://" + context.getPackageName()));
+        customTabsIntent.launchUrl(context, Uri.parse(url));
     }
 
     private void launchCustomTabs(String url) {

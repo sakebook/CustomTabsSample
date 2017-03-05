@@ -13,8 +13,8 @@
     tools:context="com.sakebook.android.sample.customtabssample.ui.CustomRequestActivity">
 
     <Button
-        android:id="@+id/button_request_header"
-        android:text="Launch with custom header"
+        android:id="@+id/button_request_normal"
+        android:text="Launch with normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -25,8 +25,8 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/button_request_normal"
-        android:text="Launch with normal"
+        android:id="@+id/button_request_header"
+        android:text="Launch with custom header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
