@@ -74,13 +74,11 @@ public class RemoteViewActivity extends AppCompatActivity {
             return;
         }
 
-        // this is a dummy
-        Intent broadcastIntent = new Intent();
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 111, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        // This is a dummy
         int[] ids = {0};
 
         CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-                .setSecondaryToolbarViews(createTransparentRemoteView(), ids, pendingIntent)
+                .setSecondaryToolbarViews(createTransparentRemoteView(), ids, null)
                 .build();
 
         customTabsIntent.intent.setPackage(packageName);
