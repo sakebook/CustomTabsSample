@@ -1,6 +1,7 @@
 package com.sakebook.android.sample.customtabssample.logics;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.customtabs.CustomTabsCallback;
@@ -26,6 +27,8 @@ public class ServiceHandler implements ServiceConnectionCallback{
     private ServiceHandlerCallback serviceHandlerCallback;
     @Nullable
     private ChromeCustomTabsCallback chromeCustomTabsCallback;
+    @Nullable
+    private String mayLaunchUrl;
 
     public ServiceHandler(Context context, ServiceHandlerCallback serviceHandlerCallback, @Nullable ChromeCustomTabsCallback chromeCustomTabsCallback) {
         this.context = context;
@@ -71,10 +74,19 @@ public class ServiceHandler implements ServiceConnectionCallback{
         return session;
     }
 
+    public void setMayLaunchUrl(String url) {
+        mayLaunchUrl = url;
+    }
+
     @Override
     public void onServiceConnected(CustomTabsClient client) {
         customTabsClient = client;
         customTabsClient.warmup(0L);
+        if (!TextUtils.isEmpty(mayLaunchUrl)) {
+            CustomTabsSession session = getSession();
+            boolean success = session.mayLaunchUrl(Uri.parse(mayLaunchUrl), null, null);
+            Log.d("CustomTabsSample", "mayLaunchUrl request is " + success + ", url = " + mayLaunchUrl);
+        }
         serviceHandlerCallback.connected();
     }
 
