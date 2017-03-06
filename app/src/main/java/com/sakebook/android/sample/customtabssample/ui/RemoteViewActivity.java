@@ -14,7 +14,6 @@ import android.widget.RemoteViews;
 import com.sakebook.android.sample.customtabssample.BuildConfig;
 import com.sakebook.android.sample.customtabssample.R;
 import com.sakebook.android.sample.customtabssample.receivers.BottombarBroadcastReceiver;
-import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 
@@ -35,10 +34,16 @@ public class RemoteViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bottombar);
         url = getIntent().getStringExtra(URL_ARGS);
 
-        findViewById(R.id.button_remote_view).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_remote_view_bottom_bar).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 launchCustomTabsWithBottomBar(url);
+            }
+        });
+        findViewById(R.id.button_remote_view_transparent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchCustomTabsWithTransparent(url);
             }
         });
     }
@@ -54,9 +59,28 @@ public class RemoteViewActivity extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 110, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         int[] ids = {R.id.twitter, R.id.line, R.id.facebook};
 
-        CustomTabsIntent customTabsIntent = new CustomTabsIntent
-                .Builder()
+        CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
                 .setSecondaryToolbarViews(createBottomBarRemoteView(), ids, pendingIntent)
+                .build();
+
+        customTabsIntent.intent.setPackage(packageName);
+        customTabsIntent.launchUrl(this, Uri.parse(url));
+    }
+
+    private void launchCustomTabsWithTransparent(String url) {
+        String packageName = CustomTabsHelper.getPackageNameToUse(this);
+        if (TextUtils.isEmpty(packageName)) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            return;
+        }
+
+        // this is a dummy
+        Intent broadcastIntent = new Intent();
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 111, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        int[] ids = {0};
+
+        CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+                .setSecondaryToolbarViews(createTransparentRemoteView(), ids, pendingIntent)
                 .build();
 
         customTabsIntent.intent.setPackage(packageName);
@@ -65,5 +89,9 @@ public class RemoteViewActivity extends AppCompatActivity {
 
     private RemoteViews createBottomBarRemoteView() {
         return new RemoteViews(BuildConfig.APPLICATION_ID, R.layout.remote_bottom_layout);
+    }
+
+    private RemoteViews createTransparentRemoteView() {
+        return new RemoteViews(BuildConfig.APPLICATION_ID, R.layout.remote_transparent_layout);
     }
 }

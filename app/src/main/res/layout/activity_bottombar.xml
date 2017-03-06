@@ -6,9 +6,14 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button_remote_view"
+        android:id="@+id/button_remote_view_bottom_bar"
         android:text="Launch with RemoteView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/button_remote_view_transparent"
+        android:text="Launch with RemoteView on transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
