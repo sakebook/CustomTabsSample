@@ -7,6 +7,7 @@
     <string name="button_label_customize_toolbar">Customize toolbar</string>
     <string name="button_label_customize_animation">Customize animation</string>
     <string name="button_label_prefetch">Prefetch</string>
+    <string name="button_label_event">Event</string>
     <string name="button_label_customize_request">Customize request</string>
     <string name="button_label_referrer">Referrer</string>
     <string name="button_label_oauth">OAuth Authorization</string>
@@ -25,7 +26,8 @@
 
 
     <!-- OAuth -->
-    <string name="oauth_request_url">https://github.com/login/oauth/authorize?client_id=%1$s</string>
+    <string name="oauth_request_url">https://github.com/login/oauth/authorize?client_id=%1$s
+    </string>
     <string name="callback_scheme">callback</string>
     <string name="callback_host">com.sakebook.android.sample.customtabssample</string>
 

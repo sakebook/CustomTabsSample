@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sakebook.android.sample.customtabssample.ui.EventActivity;
 import com.sakebook.android.sample.customtabssample.ui.RemoteViewActivity;
 import com.sakebook.android.sample.customtabssample.ui.CustomAnimationActivity;
 import com.sakebook.android.sample.customtabssample.ui.CustomRequestActivity;
@@ -50,6 +51,9 @@ public class LauncherActivity extends AppCompatActivity {
                     break;
                 case R.id.prefetch_button:
                     intent = PrefetchActivity.createIntent(LauncherActivity.this, HOME_URL);
+                    break;
+                case R.id.event_button:
+                    intent = EventActivity.createIntent(LauncherActivity.this, HOME_URL);
                     break;
                 case R.id.deprecated_bottom_bar_button:
                     intent = DeprecatedBottombarActivity.createIntent(LauncherActivity.this, HOME_URL);

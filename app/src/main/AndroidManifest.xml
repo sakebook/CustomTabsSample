@@ -53,14 +53,16 @@
             android:name=".ui.OauthActivity"
             android:launchMode="singleTask">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
 
-                <data android:scheme="@string/callback_scheme" />
-                <data android:host="@string/callback_host" />
+                <data android:scheme="@string/callback_scheme"/>
+                <data android:host="@string/callback_host"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.EventActivity">
         </activity>
     </application>
 
