@@ -15,6 +15,7 @@ import com.sakebook.android.sample.customtabssample.ui.CustomAnimationActivity;
 import com.sakebook.android.sample.customtabssample.ui.CustomRequestActivity;
 import com.sakebook.android.sample.customtabssample.ui.CustomToolbarActivity;
 import com.sakebook.android.sample.customtabssample.ui.OauthActivity;
+import com.sakebook.android.sample.customtabssample.ui.SessionActivity;
 import com.sakebook.android.sample.customtabssample.ui.SessionBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.PrefetchActivity;
@@ -54,6 +55,9 @@ public class LauncherActivity extends AppCompatActivity {
                     break;
                 case R.id.event_button:
                     intent = EventActivity.createIntent(LauncherActivity.this, HOME_URL);
+                    break;
+                case R.id.session_button:
+                    intent = SessionActivity.createIntent(LauncherActivity.this, HOME_URL);
                     break;
                 case R.id.deprecated_bottom_bar_button:
                     intent = DeprecatedBottombarActivity.createIntent(LauncherActivity.this, HOME_URL);

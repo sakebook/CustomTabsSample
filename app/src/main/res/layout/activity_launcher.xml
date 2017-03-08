@@ -67,6 +67,12 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/session_button"
+            android:text="@string/button_label_session"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
             android:id="@+id/session_bottom_bar_button"
             android:text="@string/button_label_session_bottom_bar"
             android:layout_width="match_parent"

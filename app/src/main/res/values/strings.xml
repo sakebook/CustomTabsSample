@@ -8,6 +8,7 @@
     <string name="button_label_customize_animation">Customize animation</string>
     <string name="button_label_prefetch">Prefetch</string>
     <string name="button_label_event">Event</string>
+    <string name="button_label_session">Session</string>
     <string name="button_label_customize_request">Customize request</string>
     <string name="button_label_referrer">Referrer</string>
     <string name="button_label_oauth">OAuth Authorization</string>
