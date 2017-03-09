@@ -32,7 +32,6 @@ public class WarmupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_warmup);
-        CustomTabsClient.connectAndInitialize(this, getPackageName());
         url = getIntent().getStringExtra(URL_ARGS);
         findViewById(R.id.launch_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +39,13 @@ public class WarmupActivity extends AppCompatActivity {
                 launchCustomTabs(url);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String packageName = CustomTabsHelper.getPackageNameToUse(this);
+        CustomTabsClient.connectAndInitialize(this, packageName);
     }
 
     private void launchCustomTabs(String url) {

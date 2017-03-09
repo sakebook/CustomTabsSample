@@ -37,12 +37,12 @@ public class SessionActivity extends AppCompatActivity implements ServiceConnect
     private CustomTabsClient customTabsClient;
     private ServiceConnection connection;
     private String url = "";
-    // not so hot
+    // FIXME: not so hot
     private static CustomTabsSession session;
-    private final static int[] icons = { R.drawable.twitter, R.drawable.line, R.drawable.facebook };
-    private final static int ids[] = {R.id.text_view};
     private static int pointer = 0;
     private static boolean isActiveRemoteView = true;
+    private final static int[] icons = { R.drawable.twitter, R.drawable.line, R.drawable.facebook };
+    private final static int ids[] = {R.id.text_view};
     private final static String ACTION_TOGGLE_REMOTE_VIEW = "action_toggle_remote_view";
 
     public static Intent createIntent(Context context, String url) {
