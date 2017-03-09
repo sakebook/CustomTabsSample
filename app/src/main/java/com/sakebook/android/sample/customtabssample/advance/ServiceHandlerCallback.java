@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.logics;
+package com.sakebook.android.sample.customtabssample.advance;
 
 /**
  * Created by sakemotoshinya on 2016/09/03.

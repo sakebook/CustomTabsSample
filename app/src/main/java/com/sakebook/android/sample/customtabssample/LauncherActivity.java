@@ -9,17 +9,17 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sakebook.android.sample.customtabssample.ui.EventActivity;
-import com.sakebook.android.sample.customtabssample.ui.RemoteViewActivity;
-import com.sakebook.android.sample.customtabssample.ui.CustomAnimationActivity;
-import com.sakebook.android.sample.customtabssample.ui.CustomRequestActivity;
-import com.sakebook.android.sample.customtabssample.ui.CustomToolbarActivity;
-import com.sakebook.android.sample.customtabssample.ui.OauthActivity;
-import com.sakebook.android.sample.customtabssample.ui.SessionActivity;
-import com.sakebook.android.sample.customtabssample.ui.SessionBottombarActivity;
-import com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity;
-import com.sakebook.android.sample.customtabssample.ui.PrefetchActivity;
-import com.sakebook.android.sample.customtabssample.ui.WarmupActivity;
+import com.sakebook.android.sample.customtabssample.event.EventActivity;
+import com.sakebook.android.sample.customtabssample.remoteview.RemoteViewActivity;
+import com.sakebook.android.sample.customtabssample.animation.CustomAnimationActivity;
+import com.sakebook.android.sample.customtabssample.request.CustomRequestActivity;
+import com.sakebook.android.sample.customtabssample.toolbar.CustomToolbarActivity;
+import com.sakebook.android.sample.customtabssample.oauth.OauthActivity;
+import com.sakebook.android.sample.customtabssample.session.SessionActivity;
+import com.sakebook.android.sample.customtabssample.advance.SessionBottombarActivity;
+import com.sakebook.android.sample.customtabssample.bottombar.DeprecatedBottombarActivity;
+import com.sakebook.android.sample.customtabssample.prefetch.PrefetchActivity;
+import com.sakebook.android.sample.customtabssample.warmup.WarmupActivity;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 

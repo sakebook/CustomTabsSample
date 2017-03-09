@@ -1,10 +1,10 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.event;
 
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
-import android.os.Looper;
 import android.support.customtabs.CustomTabsCallback;
 import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
@@ -12,19 +12,15 @@ import android.support.customtabs.CustomTabsSession;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.sakebook.android.sample.customtabssample.LauncherActivity;
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.services.ClipboardService;
+import com.sakebook.android.sample.customtabssample.utils.ResourceUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 import org.chromium.customtabsclient.shared.ServiceConnection;
 import org.chromium.customtabsclient.shared.ServiceConnectionCallback;
-
-import java.util.Set;
 
 public class EventActivity extends AppCompatActivity implements ServiceConnectionCallback {
 
@@ -102,7 +98,7 @@ public class EventActivity extends AppCompatActivity implements ServiceConnectio
     public void onServiceDisconnected() {
         customTabsClient = null;
         connection = null;
-        session = null;
+//        session = null;
     }
 
     private void launchCustomTabs(String url) {
@@ -111,8 +107,15 @@ public class EventActivity extends AppCompatActivity implements ServiceConnectio
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             return;
         }
+        Intent cctIntent = new CustomTabsIntent.Builder(session).build().intent;
+        cctIntent.setData(Uri.parse("https://sakebook.github.io/"));
+        cctIntent.setPackage(packageName);
+//        Intent intent = new Intent(this, ShareBroadcastReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 121, cctIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
         // Put session
         CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(session)
+                .setActionButton(ResourceUtil.createBitmap(EventActivity.this, R.drawable.line, R.color.line), "でｓｃ", pendingIntent)
                 .build();
         customTabsIntent.intent.setPackage(packageName);
         // Keep alive service
@@ -142,12 +145,14 @@ public class EventActivity extends AppCompatActivity implements ServiceConnectio
                 eventName = "NAVIGATION_STARTED";
             } else if (navigationEvent == NAVIGATION_FINISHED) {
                 eventName = "NAVIGATION_FINISHED";
+                session.setActionButton(ResourceUtil.createBitmap(EventActivity.this, R.drawable.ic_android_pink_500), "説明");
             } else if (navigationEvent == NAVIGATION_FAILED) {
                 eventName = "NAVIGATION_FAILED";
             } else if (navigationEvent == NAVIGATION_ABORTED) {
                 eventName = "NAVIGATION_ABORTED";
             } else if (navigationEvent == TAB_SHOWN) {
                 eventName = "TAB_SHOWN";
+                session.setActionButton(ResourceUtil.createBitmap(EventActivity.this, R.drawable.facebook, R.color.facebook), "説明だよ");
             } else if (navigationEvent == TAB_HIDDEN) {
                 eventName = "TAB_HIDDEN";
             } else {

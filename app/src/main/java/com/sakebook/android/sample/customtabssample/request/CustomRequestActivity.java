@@ -1,21 +1,16 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.request;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
 import android.provider.Browser;
 import android.support.customtabs.CustomTabsIntent;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.sakebook.android.sample.customtabssample.BuildConfig;
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 

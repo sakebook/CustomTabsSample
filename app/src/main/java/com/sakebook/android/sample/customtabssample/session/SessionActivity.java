@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.session;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -6,8 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
-import android.os.Handler;
-import android.support.customtabs.CustomTabsCallback;
 import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.customtabs.CustomTabsSession;
@@ -18,7 +16,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
-import android.widget.Toast;
 
 import com.sakebook.android.sample.customtabssample.BuildConfig;
 import com.sakebook.android.sample.customtabssample.R;

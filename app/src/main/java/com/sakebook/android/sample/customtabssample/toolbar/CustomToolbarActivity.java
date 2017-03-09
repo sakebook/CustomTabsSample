@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.toolbar;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -16,8 +16,6 @@ import android.view.View;
 
 import com.sakebook.android.sample.customtabssample.LauncherActivity;
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.receivers.ShareBroadcastReceiver;
-import com.sakebook.android.sample.customtabssample.services.ClipboardService;
 import com.sakebook.android.sample.customtabssample.utils.ResourceUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;

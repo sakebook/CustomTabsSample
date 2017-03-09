@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.advance;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,9 +8,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.logics.ChromeCustomTabsCallback;
-import com.sakebook.android.sample.customtabssample.logics.ServiceHandler;
-import com.sakebook.android.sample.customtabssample.logics.ServiceHandlerCallback;
 import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 
 public class SessionBottombarActivity extends AppCompatActivity {
@@ -62,7 +59,7 @@ public class SessionBottombarActivity extends AppCompatActivity {
                 CustomTabsUtil.launchCustomTabsWithSessionBottombar(SessionBottombarActivity.this, URL, serviceHandler.getSession());
             }
         });
-
+        serviceHandler.setMayLaunchUrl(URL);
     }
 
     @Override

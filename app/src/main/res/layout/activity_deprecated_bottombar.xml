@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity">
+    tools:context="com.sakebook.android.sample.customtabssample.bottombar.DeprecatedBottombarActivity">
 
     <Button
         android:id="@+id/launch_button"

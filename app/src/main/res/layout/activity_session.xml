@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sakebook.android.sample.customtabssample.ui.SessionActivity">
+    tools:context="com.sakebook.android.sample.customtabssample.session.SessionActivity">
 
     <Button
         android:id="@+id/launch_button"

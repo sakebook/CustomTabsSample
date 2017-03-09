@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.sakebook.android.sample.customtabssample.models;
+package com.sakebook.android.sample.customtabssample.advance;
 
 import android.support.annotation.Nullable;
 import android.support.customtabs.CustomTabsSession;

@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.remoteview;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -13,7 +13,6 @@ import android.widget.RemoteViews;
 
 import com.sakebook.android.sample.customtabssample.BuildConfig;
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.receivers.BottombarBroadcastReceiver;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 

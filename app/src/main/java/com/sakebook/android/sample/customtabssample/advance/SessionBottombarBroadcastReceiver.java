@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.receivers;
+package com.sakebook.android.sample.customtabssample.advance;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -11,8 +11,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.models.SessionHelper;
-import com.sakebook.android.sample.customtabssample.ui.CustomBottombar;
 
 import java.util.Iterator;
 

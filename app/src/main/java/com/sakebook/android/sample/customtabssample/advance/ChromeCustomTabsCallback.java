@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.logics;
+package com.sakebook.android.sample.customtabssample.advance;
 
 import android.os.Bundle;
 import android.support.customtabs.CustomTabsCallback;

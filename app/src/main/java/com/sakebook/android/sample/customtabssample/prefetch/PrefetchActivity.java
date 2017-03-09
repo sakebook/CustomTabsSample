@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.prefetch;
 
 import android.content.Context;
 import android.content.Intent;

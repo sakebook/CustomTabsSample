@@ -15,46 +15,46 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.PrefetchActivity">
+        <activity android:name=".prefetch.PrefetchActivity">
         </activity>
-        <activity android:name=".ui.SessionBottombarActivity">
+        <activity android:name=".advance.SessionBottombarActivity">
         </activity>
-        <activity android:name=".ui.RemoteViewActivity">
+        <activity android:name=".remoteview.RemoteViewActivity">
         </activity>
 
         <service
             android:name="org.chromium.customtabsclient.shared.KeepAliveService"
             android:exported="true"/>
 
-        <receiver android:name=".receivers.BottombarBroadcastReceiver"/>
-        <receiver android:name=".receivers.SessionBottombarBroadcastReceiver"/>
+        <receiver android:name=".remoteview.BottombarBroadcastReceiver"/>
+        <receiver android:name=".advance.SessionBottombarBroadcastReceiver"/>
 
-        <activity android:name=".ui.DeprecatedBottombarActivity">
+        <activity android:name=".bottombar.DeprecatedBottombarActivity">
         </activity>
-        <activity android:name=".ui.CustomAnimationActivity">
+        <activity android:name=".animation.CustomAnimationActivity">
         </activity>
-        <activity android:name=".ui.CustomToolbarActivity">
+        <activity android:name=".toolbar.CustomToolbarActivity">
         </activity>
 
         <service
-            android:name=".services.ClipboardService"
+            android:name=".toolbar.ClipboardService"
             android:exported="false">
         </service>
 
         <receiver
-            android:name=".receivers.ShareBroadcastReceiver"
+            android:name=".toolbar.ShareBroadcastReceiver"
             android:enabled="true"
             android:exported="false">
         </receiver>
         <receiver
-            android:name=".ui.SessionActivity$SessionBroadcastReceiver"
+            android:name=".session.SessionActivity$SessionBroadcastReceiver"
             android:enabled="true"
             android:exported="false"/>
 
-        <activity android:name=".ui.CustomRequestActivity">
+        <activity android:name=".request.CustomRequestActivity">
         </activity>
         <activity
-            android:name=".ui.OauthActivity"
+            android:name=".oauth.OauthActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -66,11 +66,11 @@
                 <data android:host="@string/callback_host"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.EventActivity">
+        <activity android:name=".event.EventActivity">
         </activity>
-        <activity android:name=".ui.SessionActivity">
+        <activity android:name=".session.SessionActivity">
         </activity>
-        <activity android:name=".ui.WarmupActivity">
+        <activity android:name=".warmup.WarmupActivity">
         </activity>
     </application>
 

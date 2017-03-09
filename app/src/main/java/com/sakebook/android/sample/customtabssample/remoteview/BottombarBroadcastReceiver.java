@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.receivers;
+package com.sakebook.android.sample.customtabssample.remoteview;
 
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;

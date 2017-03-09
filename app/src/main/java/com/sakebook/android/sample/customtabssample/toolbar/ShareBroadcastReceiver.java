@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.receivers;
+package com.sakebook.android.sample.customtabssample.toolbar;
 
 import android.content.BroadcastReceiver;
 import android.content.ClipData;

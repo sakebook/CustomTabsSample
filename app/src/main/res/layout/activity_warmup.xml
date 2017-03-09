@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sakebook.android.sample.customtabssample.ui.WarmupActivity">
+    tools:context="com.sakebook.android.sample.customtabssample.warmup.WarmupActivity">
 
     <Button
         android:id="@+id/launch_button"

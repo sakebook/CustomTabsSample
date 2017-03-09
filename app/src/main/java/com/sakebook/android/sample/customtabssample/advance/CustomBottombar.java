@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.advance;
 
 import android.content.Context;
 import android.graphics.Bitmap;

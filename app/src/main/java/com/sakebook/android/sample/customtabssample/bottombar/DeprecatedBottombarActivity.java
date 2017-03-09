@@ -1,6 +1,5 @@
-package com.sakebook.android.sample.customtabssample.ui;
+package com.sakebook.android.sample.customtabssample.bottombar;
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +13,6 @@ import android.text.TextUtils;
 import android.view.View;
 
 import com.sakebook.android.sample.customtabssample.R;
-import com.sakebook.android.sample.customtabssample.utils.CustomTabsUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 

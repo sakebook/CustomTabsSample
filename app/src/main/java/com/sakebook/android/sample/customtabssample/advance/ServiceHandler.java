@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.logics;
+package com.sakebook.android.sample.customtabssample.advance;
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,8 +9,6 @@ import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsSession;
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.sakebook.android.sample.customtabssample.models.SessionHelper;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 import org.chromium.customtabsclient.shared.ServiceConnection;

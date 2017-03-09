@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.customtabssample.services;
+package com.sakebook.android.sample.customtabssample.toolbar;
 
 import android.app.IntentService;
 import android.content.ClipData;
