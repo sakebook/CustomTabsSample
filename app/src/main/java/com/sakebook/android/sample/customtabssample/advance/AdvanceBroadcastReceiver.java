@@ -18,15 +18,15 @@ import java.util.Iterator;
  * Created by sakemotoshinya on 2016/10/15.
  */
 
-public class SessionBottombarBroadcastReceiver extends BroadcastReceiver {
+public class AdvanceBroadcastReceiver extends BroadcastReceiver {
 
     public static final String ACTION_ADD_FAVORITE = "action_add_favorite";
     public static final String ACTION_REMOVE_FAVORITE = "action_remove_favorite";
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("CustomTabsSample", "SessionBottombarBroadcastReceiver onReceive");
-        Log.d("CustomTabsSample", "SessionBottombarBroadcastReceiver onReceive action: " + intent.getAction());
+        Log.d("CustomTabsSample", "AdvanceBroadcastReceiver onReceive");
+        Log.d("CustomTabsSample", "AdvanceBroadcastReceiver onReceive action: " + intent.getAction());
         int clickedId = intent.getIntExtra(CustomTabsIntent.EXTRA_REMOTEVIEWS_CLICKED_ID, -1);
 
         CustomTabsSession session = SessionHelper.getCurrentSession();
@@ -34,7 +34,7 @@ public class SessionBottombarBroadcastReceiver extends BroadcastReceiver {
             Log.d("CustomTabsSample", "onReceive: session is null");
             return;
         }
-        Intent broadcastIntent = new Intent(context, SessionBottombarBroadcastReceiver.class);
+        Intent broadcastIntent = new Intent(context, AdvanceBroadcastReceiver.class);
         PendingIntent pendingIntent;
 
         if (clickedId == R.id.image_favorite) {
@@ -59,11 +59,11 @@ public class SessionBottombarBroadcastReceiver extends BroadcastReceiver {
             Iterator<?> it = extras.keySet().iterator();
             while (it.hasNext()) {
                 String key = (String) it.next();
-                Log.d("CustomTabsSample", "onReceive: SessionBottombarBroadcastReceiver: key    : " + key);
-                Log.d("CustomTabsSample", "onReceive: SessionBottombarBroadcastReceiver: key get: " + extras.get(key));
+                Log.d("CustomTabsSample", "onReceive: AdvanceBroadcastReceiver: key    : " + key);
+                Log.d("CustomTabsSample", "onReceive: AdvanceBroadcastReceiver: key get: " + extras.get(key));
             }
         } else {
-            Log.d("CustomTabsSample", "onReceive: SessionBottombarBroadcastReceiver: extras null");
+            Log.d("CustomTabsSample", "onReceive: AdvanceBroadcastReceiver: extras null");
         }
     }
 }

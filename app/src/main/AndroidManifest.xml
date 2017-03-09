@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".prefetch.PrefetchActivity">
         </activity>
-        <activity android:name=".advance.SessionBottombarActivity">
+        <activity android:name=".advance.AdvanceActivity">
         </activity>
         <activity android:name=".remoteview.RemoteViewActivity">
         </activity>
@@ -27,7 +27,7 @@
             android:exported="true"/>
 
         <receiver android:name=".remoteview.BottombarBroadcastReceiver"/>
-        <receiver android:name=".advance.SessionBottombarBroadcastReceiver"/>
+        <receiver android:name=".advance.AdvanceBroadcastReceiver"/>
 
         <activity android:name=".bottombar.DeprecatedBottombarActivity">
         </activity>

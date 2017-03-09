@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">CustomTabsSample</string>
+    <string name="session_bottombar_text">Back to home URL</string>
     <string name="favorite_before_text">気に入ったらハート押してお気に入りに追加しよう！</string>
     <string name="favorite_after_text">お気に入りに追加されています</string>
 
