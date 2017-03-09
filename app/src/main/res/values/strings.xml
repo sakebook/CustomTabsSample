@@ -6,6 +6,7 @@
     <string name="button_label_launch">Launch</string>
     <string name="button_label_customize_toolbar">Customize toolbar</string>
     <string name="button_label_customize_animation">Customize animation</string>
+    <string name="button_label_warmup">Warmup</string>
     <string name="button_label_prefetch">Prefetch</string>
     <string name="button_label_event">Event</string>
     <string name="button_label_session">Session</string>

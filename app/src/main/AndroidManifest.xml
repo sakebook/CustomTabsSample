@@ -46,10 +46,10 @@
             android:enabled="true"
             android:exported="false">
         </receiver>
-
-        <receiver android:name=".ui.SessionActivity$SessionBroadcastReceiver"
-                  android:enabled="true"
-                  android:exported="false"/>
+        <receiver
+            android:name=".ui.SessionActivity$SessionBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"/>
 
         <activity android:name=".ui.CustomRequestActivity">
         </activity>
@@ -69,6 +69,8 @@
         <activity android:name=".ui.EventActivity">
         </activity>
         <activity android:name=".ui.SessionActivity">
+        </activity>
+        <activity android:name=".ui.WarmupActivity">
         </activity>
     </application>
 

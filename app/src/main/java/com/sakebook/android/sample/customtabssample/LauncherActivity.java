@@ -19,6 +19,7 @@ import com.sakebook.android.sample.customtabssample.ui.SessionActivity;
 import com.sakebook.android.sample.customtabssample.ui.SessionBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.DeprecatedBottombarActivity;
 import com.sakebook.android.sample.customtabssample.ui.PrefetchActivity;
+import com.sakebook.android.sample.customtabssample.ui.WarmupActivity;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 
@@ -49,6 +50,9 @@ public class LauncherActivity extends AppCompatActivity {
                     break;
                 case R.id.remote_view_button:
                     intent = RemoteViewActivity.createIntent(LauncherActivity.this, HOME_URL);
+                    break;
+                case R.id.warmup_button:
+                    intent = WarmupActivity.createIntent(LauncherActivity.this, HOME_URL);
                     break;
                 case R.id.prefetch_button:
                     intent = PrefetchActivity.createIntent(LauncherActivity.this, HOME_URL);
