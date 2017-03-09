@@ -72,6 +72,8 @@
         </activity>
         <activity android:name=".warmup.WarmupActivity">
         </activity>
+        <activity android:name=".future.FutureActivity">
+        </activity>
     </application>
 
 </manifest>

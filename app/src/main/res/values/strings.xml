@@ -17,6 +17,7 @@
     <string name="button_label_remote_view">Remote View</string>
     <string name="button_label_deprecated_bottom_bar">Deprecated bottom bar</string>
     <string name="button_label_advance">Advance</string>
+    <string name="button_label_future">Future</string>
 
     <!-- Customize toolbar -->
     <string name="customize_toolbar_launch_button_dark_toolbar">Launch with Dark toolbar</string>

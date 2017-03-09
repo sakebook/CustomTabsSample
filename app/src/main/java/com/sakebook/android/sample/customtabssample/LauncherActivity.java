@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sakebook.android.sample.customtabssample.event.EventActivity;
+import com.sakebook.android.sample.customtabssample.future.FutureActivity;
 import com.sakebook.android.sample.customtabssample.remoteview.RemoteViewActivity;
 import com.sakebook.android.sample.customtabssample.animation.CustomAnimationActivity;
 import com.sakebook.android.sample.customtabssample.request.CustomRequestActivity;
@@ -68,6 +69,9 @@ public class LauncherActivity extends AppCompatActivity {
                     break;
                 case R.id.session_bottom_bar_button:
                     intent = AdvanceActivity.createIntent(LauncherActivity.this);
+                    break;
+                case R.id.future_button:
+                    intent = FutureActivity.createIntent(LauncherActivity.this, HOME_URL);
                     break;
                 default:
                     intent = CustomToolbarActivity.createIntent(LauncherActivity.this, HOME_URL);
