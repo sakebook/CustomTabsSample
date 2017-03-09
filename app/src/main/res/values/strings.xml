@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">CustomTabsSample</string>
     <string name="session_bottombar_text">Back to home URL</string>
-    <string name="favorite_before_text">気に入ったらハート押してお気に入りに追加しよう！</string>
-    <string name="favorite_after_text">お気に入りに追加されています</string>
+    <string name="favorite_before_text">Add favorite</string>
+    <string name="favorite_after_text">Already added favorite</string>
 
     <string name="button_label_launch">Launch</string>
     <string name="button_label_customize_toolbar">Customize toolbar</string>
@@ -16,8 +16,7 @@
     <string name="button_label_oauth">OAuth Authorization</string>
     <string name="button_label_remote_view">Remote View</string>
     <string name="button_label_deprecated_bottom_bar">Deprecated bottom bar</string>
-    <string name="button_label_bottom_bar">Bottom bar</string>
-    <string name="button_label_session_bottom_bar">Session bottom bar</string>
+    <string name="button_label_advance">Advance</string>
 
     <!-- Customize toolbar -->
     <string name="customize_toolbar_launch_button_dark_toolbar">Launch with Dark toolbar</string>

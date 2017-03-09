@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.customtabs.CustomTabsIntent;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.sakebook.android.sample.customtabssample.R;
+import com.sakebook.android.sample.customtabssample.utils.ResourceUtil;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 
@@ -93,22 +95,30 @@ public class AdvanceActivity extends AppCompatActivity {
         } else {
             builder = new CustomTabsIntent.Builder(session);
         }
-        addSessionBottombar(builder, activity, url);
 
-        CustomTabsIntent customTabsIntent = builder.build();
+        // Intent hacked
+        Intent cctIntent = new CustomTabsIntent.Builder(session).build().intent;
+        cctIntent.setData(Uri.parse(url));
+        PendingIntent cctPendingIntent = PendingIntent.getActivity(activity, 124, cctIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        addSessionBottombar(builder, activity, cctPendingIntent);
+
+        CustomTabsIntent customTabsIntent = builder
+                .setToolbarColor(Color.WHITE)
+                .build();
         CustomTabsHelper.addKeepAliveExtra(activity, customTabsIntent.intent);
         customTabsIntent.intent.setPackage(packageName);
         customTabsIntent.launchUrl(activity, Uri.parse(url));
     }
 
-    private static void addSessionBottombar(CustomTabsIntent.Builder builder, Activity activity, String url) {
+    private void addSessionBottombar(CustomTabsIntent.Builder builder, Activity activity, PendingIntent pIntent) {
         Intent broadcastIntent = new Intent(activity, AdvanceBroadcastReceiver.class);
         broadcastIntent.setAction(AdvanceBroadcastReceiver.ACTION_ADD_FAVORITE);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(activity, 120, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         int[] ids = {R.id.image_favorite};
         builder.setSecondaryToolbarViews(CustomBottombar.createSessionBottombar(activity, false), ids, pendingIntent);
+        builder.setActionButton(ResourceUtil.createBitmap(activity, R.drawable.ic_home), "home", pIntent);
         builder.setShowTitle(true);
         builder.addDefaultShareMenuItem();
     }
-
 }

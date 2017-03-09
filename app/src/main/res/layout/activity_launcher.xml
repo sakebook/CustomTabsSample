@@ -80,7 +80,7 @@
 
         <Button
             android:id="@+id/session_bottom_bar_button"
-            android:text="@string/button_label_session_bottom_bar"
+            android:text="@string/button_label_advance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

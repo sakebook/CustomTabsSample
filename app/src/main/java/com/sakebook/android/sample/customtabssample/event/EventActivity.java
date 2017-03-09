@@ -107,15 +107,8 @@ public class EventActivity extends AppCompatActivity implements ServiceConnectio
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             return;
         }
-        Intent cctIntent = new CustomTabsIntent.Builder(session).build().intent;
-        cctIntent.setData(Uri.parse("https://sakebook.github.io/"));
-        cctIntent.setPackage(packageName);
-//        Intent intent = new Intent(this, ShareBroadcastReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 121, cctIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
         // Put session
         CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(session)
-                .setActionButton(ResourceUtil.createBitmap(EventActivity.this, R.drawable.line, R.color.line), "でｓｃ", pendingIntent)
                 .build();
         customTabsIntent.intent.setPackage(packageName);
         // Keep alive service
@@ -145,14 +138,12 @@ public class EventActivity extends AppCompatActivity implements ServiceConnectio
                 eventName = "NAVIGATION_STARTED";
             } else if (navigationEvent == NAVIGATION_FINISHED) {
                 eventName = "NAVIGATION_FINISHED";
-                session.setActionButton(ResourceUtil.createBitmap(EventActivity.this, R.drawable.ic_android_pink_500), "説明");
             } else if (navigationEvent == NAVIGATION_FAILED) {
                 eventName = "NAVIGATION_FAILED";
             } else if (navigationEvent == NAVIGATION_ABORTED) {
                 eventName = "NAVIGATION_ABORTED";
             } else if (navigationEvent == TAB_SHOWN) {
                 eventName = "TAB_SHOWN";
-                session.setActionButton(ResourceUtil.createBitmap(EventActivity.this, R.drawable.facebook, R.color.facebook), "説明だよ");
             } else if (navigationEvent == TAB_HIDDEN) {
                 eventName = "TAB_HIDDEN";
             } else {

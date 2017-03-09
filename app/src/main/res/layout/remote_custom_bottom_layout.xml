@@ -11,6 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="8dp"
         android:gravity="center"
+        android:textColor="@android:color/white"
         android:text="@string/favorite_before_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
