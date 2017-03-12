@@ -17,3 +17,10 @@ $ git checkout master
 $ cd ..
 $ git read-tree -mu master
 ```
+
+## Demo App
+https://play.google.com/store/apps/details?id=com.sakebook.android.sample.customtabssample
+
+## Slide
+https://speakerdeck.com/sakebook/make-full-use-of-chrome-custom-tabs
+
